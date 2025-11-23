@@ -63,6 +63,8 @@ public class SecurityConfig {
                                         "/v3/api-docs/**",
                                         "/api-docs",
                                         "/api-docs/*"
+
+
                                 ).permitAll()
                                 .requestMatchers("/admin/**").hasRole("ADMIN")
 
