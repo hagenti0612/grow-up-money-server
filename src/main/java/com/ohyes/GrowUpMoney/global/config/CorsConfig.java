@@ -23,7 +23,7 @@ public class CorsConfig {
         config.setAllowCredentials(true); // 쿠키를 포함한 요청 허용
 
         // ★ 사용하는 프론트 도메인만 정확히 허용
-        config.setAllowedOrigins(List.of(
+        config.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000",            // React 개발 서버
                 "https://localhost:5173",            // React 개발 서버
                 "https://localhost:3000",            // React 개발 서버
