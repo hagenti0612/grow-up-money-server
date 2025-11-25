@@ -22,6 +22,14 @@ public class CorsConfig {
         config.addAllowedHeader("*"); // 모든 헤더 허용
         config.setAllowCredentials(true); // 쿠키를 포함한 요청 허용
 
+        // ★ 사용하는 프론트 도메인만 정확히 허용
+        config.setAllowedOrigins(List.of(
+                "http://localhost:3000",            // React 개발 서버
+                "https://localhost:5173",            // React 개발 서버
+                "https://localhost:3000",            // React 개발 서버
+                "https://growupmoney.duckdns.org"   // 혹시나 프론트도 여기서 띄울 때
+        ));
+
         // 허용할 HTTP 메소드
         config.setAllowedMethods(Arrays.asList(
                 "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"
